@@ -20,7 +20,7 @@ const App = () => {
     }
 
     useEffect(() => {
-        getAllFiles()
+        getAllFiles();
       }, []);
 
     return (
