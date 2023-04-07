@@ -1,0 +1,12 @@
+.header {
+    padding: 10px;
+    text-align: left;
+    color: white;
+    background-color: red;
+}
+
+.footer {
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
