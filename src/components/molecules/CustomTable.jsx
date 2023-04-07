@@ -2,9 +2,9 @@ import React from "react";
 
 import Table from 'react-bootstrap/Table';
 
-const CustomTable = () => {
+const CustomTable = ({data}) => {
   return (
-    <Table striped bordered hover>
+    <Table striped bordered hover responsive>
       <thead>
         <tr>
           <th>File Name</th>
@@ -14,42 +14,18 @@ const CustomTable = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>file0.csv</td>
-          <td>Rgtya</td>
-          <td>64075909</td>
-          <td>70ad29aacf0b6</td>
-        </tr>
-        <tr>
-          <td>file0.csv</td>
-          <td>Rgtya</td>
-          <td>64075909</td>
-          <td>70ad29aacf0b6</td>
-        </tr>
-        <tr>
-          <td>file0.csv</td>
-          <td>Rgtya</td>
-          <td>64075909</td>
-          <td>70ad29aacf0b6</td>
-        </tr>
-        <tr>
-          <td>file0.csv</td>
-          <td>Rgtya</td>
-          <td>64075909</td>
-          <td>70ad29aacf0b6</td>
-        </tr>
-        <tr>
-          <td>file0.csv</td>
-          <td>Rgtya</td>
-          <td>64075909</td>
-          <td>70ad29aacf0b6</td>
-        </tr>
-        <tr>
-          <td>file0.csv</td>
-          <td>Rgtya</td>
-          <td>64075909</td>
-          <td>70ad29aacf0b6</td>
-        </tr>
+        {data.map((file) => {
+          const {fileName, text, number, hex} = file;
+
+          return (
+            <tr key={`table-cell-${number}`}>
+              <td>{fileName}</td>
+              <td>{text}</td>
+              <td>{number}</td>
+              <td>{hex}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </Table>
   );
