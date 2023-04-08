@@ -3,10 +3,27 @@
     text-align: left;
     color: white;
     background-color: red;
+    font-weight: bold;
 }
 
 .footer {
     text-align: center;
     color: black;
     font-weight: 600;
+}
+
+.input {
+    padding: 10px 2px 30px 2px;
+}
+
+.label {
+    font-weight: bold !important;
+}
+
+.table>thead {
+    border-bottom: 2px solid;
+}
+
+.form-control:disabled {
+    background-color: lightgray;
 }
