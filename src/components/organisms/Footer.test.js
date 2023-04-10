@@ -6,7 +6,7 @@ import { Footer } from './Footer';
 const testText = 'Footer test';
 
 describe('Footer component', () => {
-  test('renders footer component with props', () => {
+  it('renders footer component with props', () => {
     render(<Footer text={testText} />);
 
     const footer = screen.getByTestId('footer');

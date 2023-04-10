@@ -3,8 +3,8 @@ import Table from 'react-bootstrap/Table';
 
 /**
  * Componente header que muestra un texto.
- * @param {string} text Texto a mostrar.
- * @returns {jsx} Retorna un elemento JSX (CustomTable) con la clase header y el texto enviado como parametro.
+ * @param {{data: [{fileName: string, text: string, number: number, hex: string}]}} data  Archivos formateados.
+ * @returns {jsx} Retorna un elemento JSX (CustomTable) con la lista de archivos.
  */
 const CustomTable = ({data}) => {
   return (

@@ -15,6 +15,8 @@
 
 ## Highlights
 
+- Clean architecture
+- Clean code
 - Atomic design
 - Singleton pattern
 - Custom hooks
@@ -36,7 +38,7 @@ Optional
 If you wish run the project without docker, then:
 
 1. npm install
-2. npm start
+2. npm run start
 3. go to `http://localhost:3000/`
 4. see the magic
 
@@ -45,6 +47,10 @@ If you wish run the project with docker, then:
 1. docker-compose up
 2. go to `http://localhost:3000/`
 3. see the magic
+
+If you wish run the test, then:
+
+1. npm run test
 
 ## Folder structure
 Explanation of hierarchies in files and layers.

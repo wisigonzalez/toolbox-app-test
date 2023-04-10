@@ -44,7 +44,7 @@ const App = () => {
                     placeholderOfInput='Ingresa el nombre del archivo (Ej: test0.csv)' 
                     handleInput={handleInputChange}
                 />
-                <CustomTable data={files}/>
+                <CustomTable data={files} emptyText='No hay resultados para mostrar'/>
                 <hr/>
                 <Footer text='©Copyrigth Luis González 2023. Todos los derechos reservados - Powered by Wisi.' />
             </Container>

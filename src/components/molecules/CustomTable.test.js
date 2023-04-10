@@ -19,7 +19,7 @@ const testData = [
 ];
 
 describe('CustomTable component', () => {
-  test('renders custom table component with correct data', () => {
+  it('renders custom table component with correct data', () => {
     render(<CustomTable data={testData} />);
 
     const tableCell = screen.getByTestId('table-cell-bar');
