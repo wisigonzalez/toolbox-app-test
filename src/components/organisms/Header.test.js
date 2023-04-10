@@ -6,7 +6,7 @@ import { Header } from './Header';
 const testText = 'Header test';
 
 describe('Header component', () => {
-  test('renders footer component with props', () => {
+  it('renders footer component with props', () => {
     render(<Header text={testText} />);
 
     const header = screen.getByTestId('header');

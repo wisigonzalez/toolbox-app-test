@@ -11,7 +11,7 @@ const testPending = false;
 const testNewValue = 'test1.csv';
 
 describe('Input component', () => {
-  test('renders input component with props and not disabled', () => {
+  it('renders input component with props and not disabled', () => {
     render(
       <Input 
         valueOfInput={testValue}
@@ -27,7 +27,7 @@ describe('Input component', () => {
     expect(inputLabel).toHaveTextContent(testText);
   });
 
-  test('renders input component with props and disbabled', () => {
+  it('renders input component with props and disbabled', () => {
     render(
       <Input 
         valueOfInput={testValue}
@@ -43,7 +43,7 @@ describe('Input component', () => {
     expect(inputControl).toHaveAttribute('disabled');
   });
 
-  test('updates input value and calls handleInput function', () => {
+  it('updates input value and calls handleInput function', () => {
     render(
       <Input 
         valueOfInput={''}

@@ -1,11 +1,13 @@
 import {useEffect, useState} from "react";
 
 import apiProvider from "../providers";
-import { API_URL_V1 } from "../constants";
+import { API_URL_V2 } from "../constants";
 
 /**
  * Funcion que obtiene los archivos formateados.
- * @returns {{data: {fileName: string, text: string, number: number, hex: string}, isLoading: boolean}}
+ * @param {string} fileName Nombre del archivo a filtrar.
+ * @returns {{data: [{fileName: string, text: string, number: number, hex: string}], isLoading: boolean}} 
+ * Retorna un objeto con las propiedades data y tambien el isLoading, si no, retorna un array vacio junto al isLoading.
  * */
 export const useGetAllFiles = (fileName) => {
     const [data, setData] = useState([]);
@@ -15,7 +17,7 @@ export const useGetAllFiles = (fileName) => {
         if (!fileName) {
             const fetchData = async () => {
                 try {
-                    const response = await apiProvider.get(`${API_URL_V1}/files/data`);
+                    const response = await apiProvider.get(`${API_URL_V2}/files/data`);
                     setData(response?.data?.data || []);
                     setIsLoading(false);
                 } catch (error) {
